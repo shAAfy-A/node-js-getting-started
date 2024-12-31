@@ -29,6 +29,9 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
+      - name: sign in as admin
+        run: sudo -i
+
       - name: Add SSH Key
         run: |
           sudo echo "${{ secrets.EC2_PRIVATE_KEY }}" > ~/.ssh/your-key.pem
