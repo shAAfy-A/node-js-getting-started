@@ -40,7 +40,7 @@ jobs:
           ssh -i ~/.ssh/your-key.pem -o StrictHostKeyChecking=no ubuntu@98.80.254.241 "sudo mkdir -p /var/www/app && sudo chown ubuntu:ubuntu /var/www/app"
       - name: Copy Files to EC2
         run: |
-          scp -i ~/.ssh/your-key.pem -o StrictHostKeyChecking=no -r .* ubuntu@98.80.254.241:/var/www/app/
+          scp -i ~/.ssh/your-key.pem -o StrictHostKeyChecking=no -r ./* ubuntu@98.80.254.241:/var/www/app/
           sudo setcap 'cap_net_bind_service=+ep' $(which node)
 
 
