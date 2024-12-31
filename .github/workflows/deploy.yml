@@ -28,7 +28,8 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-
+      - name: upgrade privillages
+        run: sudo -i
       - name: Add SSH Key
         run: |
           mkdir -p ~/.ssh
