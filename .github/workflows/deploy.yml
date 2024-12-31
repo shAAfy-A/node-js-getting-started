@@ -37,7 +37,7 @@ jobs:
 
       - name: Copy Files to EC2
         run: |
-          scp -i ~/.ssh/your-key.pem -o StrictHostKeyChecking=no -r . ubuntu@34.230.60.24:/var/www/app/
+          scp -i ~/.ssh/your-key.pem -o StrictHostKeyChecking=no -r ./ ubuntu@34.230.60.24:/var/www/app/
 
       - name: Start Application on EC2
         run: |
