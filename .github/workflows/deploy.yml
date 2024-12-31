@@ -26,10 +26,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-	  - name: Checkout Code
+      - name: Checkout Code
         uses: actions/checkout@v3
 
-	  - name: Add SSH Key
+      - name: Add SSH Key
         run: |
           echo "${{ secrets.EC2_PRIVATE_KEY }}" > ~/.ssh/your-key.pem
           chmod 600 ~/.ssh/your-key.pem
